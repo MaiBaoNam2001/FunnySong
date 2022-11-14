@@ -21,6 +21,7 @@
 
 <body>
     <div id="player"></div>
+    <img src="https://maibaonam2001.github.io/FunnySong/image.png" id="image" class="img-responsive d-none" alt="Ghost">
 
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
@@ -59,20 +60,12 @@
         function stopVideo() {
             player.stopVideo();
             $('#player').remove();
-
-            var image = $('<img>', {
-                src: 'https://maibaonam2001.github.io/FunnySong/image.png',
-                class: 'img-responsive',
-                alt: 'Ghost'
-            });
-
+            $('#image').removeClass('d-none');
             var audio = $('<audio>', {
                 src: 'https://maibaonam2001.github.io/FunnySong/sound.mp3',
                 autoplay: true,
                 class: 'd-none'
             });
-
-            $('body').append(image);
             $('body').append(audio);
         }
     </script>
